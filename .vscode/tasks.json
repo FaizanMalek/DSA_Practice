@@ -2,21 +2,19 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build and run with txt",
+      "label": "build and run cpp",
       "type": "shell",
       "command": "C:\\Windows\\System32\\cmd.exe",
       "args": [
         "/d",
         "/c",
-        "g++ -std=c++17 -g \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && \"${fileDirname}\\${fileBasenameNoExtension}.exe\" < \"${workspaceFolder}\\input.txt\" > \"${workspaceFolder}\\output.txt\""
+        "g++ -std=c++17 -g \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && \"${fileDirname}\\${fileBasenameNoExtension}.exe\" < \"${fileDirname}\\input.txt\" > \"${fileDirname}\\output.txt\""
       ],
       "group": {
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": [
-        "$gcc"
-      ]
+      "problemMatcher": ["$gcc"]
     }
   ]
 }
