@@ -56,6 +56,22 @@ void print6(int n) {
     }
 }
 
+void print7(int n) {
+    for(int i = 0; i < n; i ++) {
+        for(int j = 0; j < n - i; j ++) {
+            cout << " ";
+        }
+
+        for(int j = 0; j < 2*i + 1; j ++) {
+            cout << "*";
+        }
+
+        for(int j = 0; j < n - i; j ++) {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
 int main() {
     int n;
     cin >> n;
@@ -64,5 +80,6 @@ int main() {
     // print3(n);
     // print4(n);
     // print5(n);
-    print6(n);
+    // print6(n);
+    print7(n);
 }
