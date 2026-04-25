@@ -109,6 +109,17 @@ void print10(int n) {
     }
 }
 
+void print11(int n) {
+    int start = 1;
+    for(int i = 1; i <= n; i ++) {
+        for(int j = 0; j < i; j ++) {
+            cout << start;
+            start ^= 1;
+        }
+        cout << endl;
+    }
+}
+
 int main() {
     int n;
     cin >> n;
@@ -121,5 +132,6 @@ int main() {
     // print7(n);
     // print8(n);
     // print9(n);
-    print10(n);
+    // print10(n);
+    print11(n);
 }
