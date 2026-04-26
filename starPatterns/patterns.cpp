@@ -165,12 +165,75 @@ void print15(int n) {
 
 void print16(int n) {
     for (int i = 0; i < n; i ++) {
-        for (char ch = 'A' + i, j = 0; j <= i; j ++) {
+        for (char ch = 'A' + i, j = 0; j <= i; j ++) { // j gets promoted to int because it is compared with int i;
             cout << ch;
         }
         cout << endl;
     }
 }
+
+void print17(int n) {
+    for (int i = 0; i < n; i ++) {
+        for (int j = 0; j < n - i - 1; j ++) {
+            cout << " ";
+        }
+        char ch = 'A';
+        for(int j = 0; j < 2 * i + 1; j ++) {
+            cout << ch; 
+           if (j < i )
+                ch ++;
+            else
+                ch --;
+
+        }
+        for (int j = 0; j < n - i - 1; j ++) {
+            cout << " ";
+        }
+
+        cout << endl;
+    }
+}
+
+void print18( int n) {
+    for (int i = 0; i < n; i ++) {
+        for (char ch = 'E' - i; ch <= 'E'; ch ++) {
+            cout << ch;
+        }
+        cout << endl;
+    }
+}
+
+void print19(int n) {
+    for( int i = 0; i < n; i ++) {
+        for (int j = 0; j < n - i; j ++) {
+            cout << "*";
+        }
+        for(int j = 0; j < 2 * i; j ++) {
+            cout << " ";
+        }
+        for (int j = 0; j < n - i; j ++) {
+            cout << "*";
+        }
+
+        cout << endl;
+    }
+    
+    for( int i = n - 1; i >= 0; i --) {
+
+        for (int j = 0; j < n - i; j ++) {
+            cout << "*";
+        }
+        for(int j = 0; j < 2 * i; j ++) {
+            cout << " ";
+        }
+        for (int j = 0; j < n - i; j ++) {
+            cout << "*";
+        }
+        cout << endl;
+
+    }
+}
+
 
 int main() {
     int n;
@@ -190,5 +253,9 @@ int main() {
     // print13(n);
     // print14(n);
     // print15(n);
-    print16(n);
+    // print16(n);
+    // print17(n);
+    // print18(n);
+    print19(n);
+
 }
